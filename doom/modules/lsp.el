@@ -9,13 +9,17 @@
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
 
-(add-hook! '(typescript-ts-mode-hook tsx-ts-mode-hook) #'lsp!)
+(add-hook! '(typescript-ts-mode-hook tsx-ts-mode-hook go-ts-mode-hook) #'lsp!)
 
 (after! lsp-mode
   (add-to-list 'lsp-language-id-configuration '(tsx-ts-mode . "typescriptreact"))
   (add-to-list 'lsp-language-id-configuration '(typescript-ts-mode . "typescript"))
   (setq lsp-auto-guess-root t)
-  (setq lsp-warn-no-matched-clients nil))
+  (setq lsp-warn-no-matched-clients nil)
+  (setq lsp-go-use-gofumpt t)
+  (setq lsp-go-use-staticcheck t)
+  (setq lsp-gopls-hover-kind "FullDocumentation")
+  (setq lsp-idle-delay 0.5))
 
 (setq lsp-completion-provider :none)
 

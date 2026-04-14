@@ -21,7 +21,7 @@
     (find-file filename)
 
     (when (= (buffer-size) 0)
-      (insert "#+title: " today "\n\n* todo list [/]  \n\n* journal \n"))))
+      (insert "#+title: " today "\n\n* todo list [/]  \n\n* notes \n"))))
 
 (map! :leader
       :desc "Open daily note"
