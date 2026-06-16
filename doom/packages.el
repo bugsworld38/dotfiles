@@ -54,6 +54,10 @@
 ;; (unpin! t)
 
 (package! treesit-auto)
+(package! inheritenv
+  :recipe (:host github :repo "purcell/inheritenv"))
+(package! claude-code
+  :recipe (:host github :repo "stevemolitor/claude-code.el"))
 (package! better-jumper)
 (package! pg)
 (package! pgmacs
