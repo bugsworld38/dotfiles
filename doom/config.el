@@ -56,3 +56,5 @@
 (load! "modules/lsp")
 (load! "modules/projects")
 (load! "modules/org")
+(load! "modules/ai")
+
